@@ -7,6 +7,8 @@ plugins {
     id("kotlin-parcelize")
     id("androidx.navigation.safeargs.kotlin")
     id("dagger.hilt.android.plugin")
+
+    id("com.google.dagger.hilt.android") version "2.47" apply true
 }
 
 android {
@@ -51,7 +53,8 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
-    apply() plugin :"kotlin-kapt"
+    //apply() plugin :"kotlin-kapt"
+    apply(plugin = "kotlin-kapt")
 
     //loading button
     implementation("br.com.simplepass:loading-button-android:2.2.0")
@@ -72,7 +75,10 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment-ktx:2.4.2")
 
     //Dagger hilt
-    implementation("com.google.dagger:hilt-android:2.38.1")
-    kapt("com.google.dagger:hilt-compiler:2.38.1")
+    //implementation("com.google.dagger:hilt-android:2.38.1")
+    //kapt("com.google.dagger:hilt-compiler:2.38.1")
+
+    implementation("com.google.dagger:hilt-android:2.47")
+    kapt("com.google.dagger:hilt-compiler:2.47")
 
 }
