@@ -67,7 +67,8 @@
                 android:layout_height="49dp"
                 android:ems="10"
                 android:hint="Enter your Email address"
-                android:inputType="textEmailAddress" />
+                android:inputType="textEmailAddress"
+                android:drawableEnd="@drawable/done"/>
 
             <TextView
                 android:id="@+id/passwordLogin"
@@ -84,7 +85,7 @@
                 android:ems="10"
                 android:hint="Enter your Password"
                 android:inputType="textPassword"
-
+                android:drawableEnd="@drawable/password_icon"
                 />
 
 
