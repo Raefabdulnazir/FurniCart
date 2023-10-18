@@ -13,4 +13,10 @@
     <string name="Welcomesubheading">Please login with your credentials</string>
     <string name="Email">E-mail</string>
     <string name="Password">Password</string>
+    <string name="Loginbtntext">Login</string>
+    <string name="notRegisteredtxt">Not registered yet , Sign UP</string>
+    <string name="createAccountHeading">Create Account</string>
+    <string name="signupSubheading">to get started now</string>
+    <string name="signupBtnText" />
+
 </resources>
