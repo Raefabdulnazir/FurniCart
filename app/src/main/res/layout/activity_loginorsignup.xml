@@ -14,7 +14,7 @@
         android:src="@drawable/furnicartlogoonly" />
 
     <Button
-        android:id="@+id/firstloginBtn"
+        android:id="@+id/button"
         android:layout_width="247dp"
         android:layout_height="48dp"
         android:backgroundTint="#FEA100"
@@ -27,7 +27,7 @@
         app:layout_constraintVertical_bias="0.815" />
 
     <Button
-        android:id="@+id/firstSignUpBtn"
+        android:id="@+id/button2"
         android:layout_width="247dp"
         android:layout_height="48dp"
         android:backgroundTint="#FEA100"
@@ -35,7 +35,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firstloginBtn"
+        app:layout_constraintTop_toBottomOf="@+id/button"
         app:layout_constraintVertical_bias="0.271" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
