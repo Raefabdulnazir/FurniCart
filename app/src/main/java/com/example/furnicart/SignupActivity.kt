@@ -7,21 +7,20 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.auth
 
 class SignupActivity : AppCompatActivity() {
-    lateinit var etEmail: EditText
-    lateinit var etConfPass: EditText
+    private lateinit var etEmail: EditText
+    private lateinit var etConfPass: EditText
     private lateinit var etPass: EditText
     private lateinit var btnSignUp: Button
-    private lateinit var auth:FirebaseAuth
+    private lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
 
-        //View Bindings
+        // View Bindings
         etEmail = findViewById(R.id.editTextTextEmailAddress3)
         etConfPass = findViewById(R.id.editTextTextConfirmPassword)
         etPass = findViewById(R.id.editTextTextPassword)
@@ -33,37 +32,40 @@ class SignupActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        //initialising auth object
-        auth = Firebase.auth
-        btnSignUp.setOnClickListener{
+        // Initializing the auth object
+        auth = FirebaseAuth.getInstance()
+
+        btnSignUp.setOnClickListener {
             signUpUser()
         }
     }
 
-    private fun signUpUser(){
+    private fun signUpUser() {
         val email = etEmail.text.toString()
         val pass = etPass.text.toString()
         val confirmPass = etConfPass.text.toString()
 
-        //check pass
-        if(email.isBlank()||pass.isBlank()||confirmPass.isBlank()){
-            Toast.makeText(this,"Email and password cannot be blank",Toast.LENGTH_SHORT).show()
+        // Email and password validation
+        if (email.isBlank() || pass.isBlank() || confirmPass.isBlank()) {
+            Toast.makeText(this, "Email and password cannot be blank", Toast.LENGTH_SHORT).show()
             return
         }
 
-        if(pass!=confirmPass){
-            Toast.makeText(this,"Password and Confirm password do not match",Toast.LENGTH_SHORT).show()
+        if (pass != confirmPass) {
+            Toast.makeText(this, "Password and Confirm password do not match", Toast.LENGTH_SHORT).show()
             return
         }
 
-        auth.createUserWithEmailAndPassword(email,pass).addOnCompleteListener(this){
-            if(it.isSuccessful){
-                Toast.makeText(this,"Successfully signed up",Toast.LENGTH_SHORT).show()
+        // Firebase user sign-up
+        auth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener(this) { task ->
+            if (task.isSuccessful) {
+                Toast.makeText(this, "Successfully signed up", Toast.LENGTH_SHORT).show()
+                // You might add further actions here upon successful signup
                 finish()
             } else {
-                Toast.makeText(this,"Signed up failed",Toast.LENGTH_SHORT).show()
+                // Handle sign-up failure
+                Toast.makeText(this, "Sign up failed: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
             }
         }
     }
-
 }
