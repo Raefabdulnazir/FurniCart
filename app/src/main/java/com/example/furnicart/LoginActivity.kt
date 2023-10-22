@@ -58,7 +58,7 @@ class LoginActivity : AppCompatActivity() {
                         etPass.setCompoundDrawablesWithIntrinsicBounds(
                             0,
                             0,
-                            R.drawable.password_icon,
+                            R.drawable.password_closed_icon,
                             0
                         )
 
