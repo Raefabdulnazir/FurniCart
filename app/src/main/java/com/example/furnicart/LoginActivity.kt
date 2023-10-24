@@ -95,6 +95,8 @@ class LoginActivity : AppCompatActivity() {
             if (task.isSuccessful) {
                 Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT).show()
                 // You might add further actions here upon successful login
+                val intent = Intent(this@LoginActivity,HomePageActivity::class.java)
+                startActivity(intent)
                 finish()
             } else {
                 // Handle login failure
