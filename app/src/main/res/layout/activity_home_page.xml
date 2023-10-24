@@ -44,5 +44,61 @@
         app:layout_constraintVertical_bias="0.046"
         />
 
+    <LinearLayout
+        android:id="@+id/testingLayout"
+        android:layout_width="389dp"
+        android:layout_height="63dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/popular_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:paddingHorizontal="2dp"
+            android:paddingVertical="2dp"
+            android:src="@drawable/icon_popular" />
+
+        <ImageView
+            android:id="@+id/chair_icon"
+            android:layout_width="41dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="40dp"
+            android:paddingHorizontal="2dp"
+            android:paddingVertical="2dp"
+            android:src="@drawable/icon_chairs" />
+
+        <ImageView
+            android:id="@+id/table_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="40dp"
+            android:paddingHorizontal="2dp"
+            android:paddingVertical="2dp"
+            android:src="@drawable/icon_tables" />
+
+        <ImageView
+            android:id="@+id/bed_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="40dp"
+            android:paddingHorizontal="2dp"
+            android:paddingVertical="2dp"
+            android:src="@drawable/icon_beds" />
+
+        <ImageView
+            android:id="@+id/sofas_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="40dp"
+            android:paddingHorizontal="2dp"
+            android:paddingVertical="2dp"
+            android:src="@drawable/icon_sofas"
+            />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
