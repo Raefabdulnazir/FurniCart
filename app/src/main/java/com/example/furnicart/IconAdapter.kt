@@ -1,3 +1,4 @@
+/*
 package com.example.furnicart
 
 import android.view.LayoutInflater
@@ -39,4 +40,4 @@ class IconAdapter (private val iconList: List<Int>):RecyclerView.Adapter<IconAda
             }
         }
     }
-}
+}*/
