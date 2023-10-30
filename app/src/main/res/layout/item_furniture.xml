@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- item_furniture.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- ImageView for furniture image -->
+    <ImageView
+        android:id="@+id/furnitureImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sample_sofa_img" />
+
+    <!-- TextView for furniture name -->
+    <TextView
+        android:id="@+id/furnitureNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Furniture Name"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"/>
+
+    <!-- TextView for furniture description -->
+<!--
+    <TextView
+        android:id="@+id/furnitureDescriptionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Furniture Description"
+        android:textSize="14sp"
+        android:layout_marginTop="8dp"/>
+-->
+
+    <!-- TextView for furniture price -->
+    <TextView
+        android:id="@+id/furniturePriceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Furniture Price"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"/>
+
+</LinearLayout>

@@ -11,20 +11,28 @@ import com.example.furnicart.R
 
 
 class HomePageActivity : AppCompatActivity() {
+    private lateinit var furnitureRecyclerView:  RecyclerView
+    private lateinit var furnitureAdapter: FurnitureAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_page)
 
-     /*   val iconList = listOf(
-            R.drawable.icon_popular,
-            R.drawable.icon_chairs,
-            R.drawable.icon_tables,
-            R.drawable.icon_sofas,
-            R.drawable.icon_beds
-        )*/
-        /*val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
-        recyclerView.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
-        recyclerView.adapter = IconAdapter(iconList)*/
+        //find the recyclerView
+        furnitureRecyclerView = findViewById(R.id.furnitureRecyclerView)
+
+        // Create dummy data (you should replace this with your actual data)
+        val furnitureItems: List<Furnitureitem> = generateDummyData()
+
+        //set up the adapter
+        furnitureAdapter = FurnitureAdapter(furnitureItems)
+        furnitureRecyclerView.layoutManager = LinearLayoutManager(this)
+        furnitureRecyclerView.adapter = furnitureAdapter
+
+        //sample data for recyclerView
+        val sampleFurnitureItems: List<Furnitureitem> = listOf(
+            Furnitureitem(R.drawable.sample_sofa_img,"Sample item 1" , 100.00)
+        )
+
         val popularIcon = findViewById<ImageView>(R.id.popular_icon)
         val chairIcon = findViewById<ImageView>(R.id.chair_icon)
         val tableIcon = findViewById<ImageView>(R.id.table_icon)
@@ -47,6 +55,12 @@ class HomePageActivity : AppCompatActivity() {
             animateView(bedIcon)
         }
 
+    }
+    private fun generateDummyData(): List<Furnitureitem>{
+        val furnitureItems: MutableList<Furnitureitem> = ArrayList(0)
+        // Add some items to the list
+        // Replace this with your actual data population logic
+        return furnitureItems
     }
 
     fun animateView(view:View) {
