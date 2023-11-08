@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyAccountActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="417dp"
+        android:layout_height="160dp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/profilePic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            tools:srcCompat="@tools:sample/avatars" />
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="412dp"
+        android:layout_height="508dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/settingsTextView"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center|start"
+                android:paddingHorizontal="5dp"
+                android:paddingStart="5dp"
+                android:paddingLeft="5dp"
+                android:paddingEnd="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:text="@string/settingsBtn"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/orderHistoryTextView"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center|start"
+                android:paddingHorizontal="5dp"
+                android:paddingStart="5dp"
+                android:paddingLeft="5dp"
+                android:paddingEnd="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:text="@string/orderHistoryTextView"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/newsLetterTextView"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center|start"
+                android:paddingHorizontal="5dp"
+                android:paddingStart="5dp"
+                android:paddingLeft="5dp"
+                android:paddingEnd="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:text="@string/newsletterTxt"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/returnsTextView"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center|start"
+                android:paddingHorizontal="5dp"
+                android:paddingStart="5dp"
+                android:paddingLeft="5dp"
+                android:paddingEnd="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:text="@string/returnTxt"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/customerSupportTextView"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center|start"
+                android:paddingHorizontal="5dp"
+                android:paddingStart="5dp"
+                android:paddingLeft="5dp"
+                android:paddingEnd="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:text="@string/customerSupportText"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/paymentMethodsTextView"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center|start"
+                android:paddingHorizontal="5dp"
+                android:paddingStart="5dp"
+                android:paddingLeft="5dp"
+                android:paddingEnd="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:text="@string/paymentMethodsText"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/logoutTextView"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center|start"
+                android:paddingHorizontal="5dp"
+                android:paddingStart="5dp"
+                android:paddingLeft="5dp"
+                android:paddingEnd="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:text="@string/logoutText"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+        app:menu="@menu/bottom_navigation_menu" />
+</androidx.constraintlayout.widget.ConstraintLayout>

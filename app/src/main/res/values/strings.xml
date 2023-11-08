@@ -18,5 +18,12 @@
     <string name="createAccountHeading">Create Account</string>
     <string name="signupSubheading">to get started now</string>
     <string name="signupBtnText" />
+    <string name="settingsBtn">Profile Settings</string>
+    <string name="orderHistoryTextView">Order History</string>
+    <string name="newsletterTxt">Newsletter Subscription</string>
+    <string name="returnTxt">Returns and Refunds</string>
+    <string name="customerSupportText">Customer Support</string>
+    <string name="paymentMethodsText">Payment Methods</string>
+    <string name="logoutText">Logout</string>
 
 </resources>
