@@ -1,5 +1,6 @@
 package com.example.furnicart
 
+import android.content.Intent
 import android.media.Image
 import android.os.Bundle
 import android.view.View
@@ -8,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.furnicart.R
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
 class HomePageActivity : AppCompatActivity() {
@@ -55,12 +57,45 @@ class HomePageActivity : AppCompatActivity() {
             animateView(bedIcon)
         }
 
+        //bottom navigation bar
+        val bottomNavigationView : BottomNavigationView = findViewById(R.id.bottom_navigation)
+        bottomNavigationView.setOnNavigationItemSelectedListener { item ->
+            when(item.itemId) {
+                R.id.navigation_home -> {
+                    openHomePage()
+                    true
+                }
+                R.id.navigation_bookmark -> {
+                    openBookmarkPage()
+                    true
+                }
+                R.id.navigation_account -> {
+                    openAccountPage()
+                    true
+                }
+                else->false
+            }
+        }
+
     }
     private fun generateDummyData(): List<Furnitureitem>{
         val furnitureItems: MutableList<Furnitureitem> = ArrayList(0)
         // Add some items to the list
         // Replace this with your actual data population logic
         return furnitureItems
+    }
+
+    private fun openHomePage(){
+        val intent = Intent(this, HomePageActivity::class.java)
+        startActivity(intent)
+    }
+    private fun openBookmarkPage(){
+        val intent = Intent(this,BookmarkPageActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun openAccountPage(){
+        val intent = Intent(this,MyAccountActivity::class.java)
     }
 
     fun animateView(view:View) {
