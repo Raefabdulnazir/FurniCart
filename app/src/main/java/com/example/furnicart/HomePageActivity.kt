@@ -20,15 +20,15 @@ class HomePageActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home_page)
 
         //find the recyclerView
-        furnitureRecyclerView = findViewById(R.id.furnitureRecyclerView)
+        //furnitureRecyclerView = findViewById(R.id.furnitureRecyclerView)
 
         // Create dummy data (you should replace this with your actual data)
-        val furnitureItems: List<Furnitureitem> = generateDummyData()
+        //val furnitureItems: List<Furnitureitem> = generateDummyData()
 
         //set up the adapter
-        furnitureAdapter = FurnitureAdapter(furnitureItems)
+/*        furnitureAdapter = FurnitureAdapter(furnitureItems)
         furnitureRecyclerView.layoutManager = LinearLayoutManager(this)
-        furnitureRecyclerView.adapter = furnitureAdapter
+        furnitureRecyclerView.adapter = furnitureAdapter*/
 
         //sample data for recyclerView
         val sampleFurnitureItems: List<Furnitureitem> = listOf(
