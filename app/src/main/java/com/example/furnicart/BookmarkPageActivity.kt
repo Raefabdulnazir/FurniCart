@@ -41,6 +41,7 @@ class BookmarkPageActivity : AppCompatActivity() {
 
     private fun openAccountPage(){
         val intent = Intent(this,MyAccountActivity::class.java)
+        startActivity(intent)
     }
 
 }

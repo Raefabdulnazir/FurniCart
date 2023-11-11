@@ -78,12 +78,12 @@ class HomePageActivity : AppCompatActivity() {
         }
 
     }
-    private fun generateDummyData(): List<Furnitureitem>{
+/*    private fun generateDummyData(): List<Furnitureitem>{
         val furnitureItems: MutableList<Furnitureitem> = ArrayList(0)
         // Add some items to the list
         // Replace this with your actual data population logic
         return furnitureItems
-    }
+    }*/
 
     private fun openHomePage(){
         val intent = Intent(this, HomePageActivity::class.java)
@@ -96,6 +96,7 @@ class HomePageActivity : AppCompatActivity() {
 
     private fun openAccountPage(){
         val intent = Intent(this,MyAccountActivity::class.java)
+        startActivity(intent)
     }
 
     fun animateView(view:View) {
